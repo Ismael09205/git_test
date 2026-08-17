@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy — E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ───────────────────────────────────────────────── -->
+  <header class="navbar">
+    <div class="navbar-brand">🛍️ ShopEasy</div>
+    <nav class="navbar-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="orders.html">My Orders</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">
+      🛒 Cart <span class="cart-badge" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="hero">
+    <h1>Find your next favourite thing</h1>
+    <p>Quality products delivered to your door.</p>
+  </section>
+
+  <!-- ── Filters ──────────────────────────────────────────────── -->
+  <main class="container">
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-category="">All</button>
+    </div>
+
+    <!-- ── Product grid ───────────────────────────────────────── -->
+    <div class="product-grid" id="productGrid">
+      <p class="loading">Loading products…</p>
+    </div>
+  </main>
+
+  <!-- ── Cart Sidebar ─────────────────────────────────────────── -->
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-btn" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: <strong id="cartTotal">$0.00</strong></p>
+      <button class="btn-primary full-width" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ── Checkout Modal ───────────────────────────────────────── -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content">
+      <h2>Complete your order</h2>
+      <form id="checkoutForm">
+        <label>Name
+          <input type="text" id="custName" required placeholder="Jane Doe" />
+        </label>
+        <label>Email
+          <input type="email" id="custEmail" required placeholder="jane@example.com" />
+        </label>
+        <label>Address
+          <input type="text" id="custAddress" placeholder="123 Main St, City" />
+        </label>
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" id="cancelCheckout">Cancel</button>
+          <button type="submit" class="btn-primary">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── Toast ────────────────────────────────────────────────── -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
