@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShopEasy — Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .login-wrap { max-width:360px; margin:6rem auto; background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:2rem; display:flex; flex-direction:column; gap:1rem; }
+    .login-wrap h1 { font-size:1.3rem; text-align:center; }
+    .login-wrap label { display:flex; flex-direction:column; gap:.3rem; font-size:.85rem; font-weight:600; color:#57606a; }
+    .login-wrap input { border:1px solid #e5e7eb; border-radius:6px; padding:.5rem .75rem; font-size:.95rem; outline:none; }
+    .login-wrap input:focus { border-color:#3b82d4; }
+    .login-error { color:#ef4444; font-size:.85rem; text-align:center; min-height:1.2em; }
+  </style>
+</head>
+<body>
+  <header class="navbar"><div class="navbar-brand">🛍️ ShopEasy</div></header>
+  <div class="login-wrap">
+    <h1>Sign in</h1>
+    <label>Username<input id="user" type="text" placeholder="admin" /></label>
+    <label>Password<input id="pass" type="password" placeholder="••••" /></label>
+    <p class="login-error" id="err"></p>
+    <button class="btn-primary" onclick="doLogin()">Login</button>
+  </div>
+  <script>
+    // Hardcoded credentials — for testing only
+    const USERS = { admin: "1234", demo: "demo" };
+
+    // Already logged in? go straight to shop
+    if (sessionStorage.getItem("loggedIn")) location.replace("index.html");
+
+    function doLogin() {
+      const u = document.getElementById("user").value.trim();
+      const p = document.getElementById("pass").value;
+      if (USERS[u] && USERS[u] === p) {
+        sessionStorage.setItem("loggedIn", "1");
+        location.replace("index.html");
+      } else {
+        document.getElementById("err").textContent = "Invalid username or password.";
+      }
+    }
+  </script>
+</body>
+</html>
