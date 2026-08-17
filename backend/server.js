@@ -10,12 +10,24 @@ app.use(express.json());
 // ── In-memory data ────────────────────────────────────────────────────────────
 
 let products = [
-  { id: 1, name: "Wireless Headphones", price: 79.99, category: "Electronics", stock: 15, image: "🎧" },
-  { id: 2, name: "Running Shoes", price: 59.99, category: "Sports", stock: 8, image: "👟" },
-  { id: 3, name: "Coffee Maker", price: 49.99, category: "Home", stock: 20, image: "☕" },
-  { id: 4, name: "Backpack", price: 39.99, category: "Accessories", stock: 12, image: "🎒" },
-  { id: 5, name: "Sunglasses", price: 29.99, category: "Accessories", stock: 25, image: "🕶️" },
-  { id: 6, name: "Yoga Mat", price: 24.99, category: "Sports", stock: 30, image: "🧘" },
+  { id:  1, name: "Wireless Headphones", price: 79.99, category: "Electronics",  stock: 15, image: "🎧" },
+  { id:  2, name: "Running Shoes",        price: 59.99, category: "Sports",        stock:  8, image: "👟" },
+  { id:  3, name: "Coffee Maker",         price: 49.99, category: "Home",          stock: 20, image: "☕" },
+  { id:  4, name: "Backpack",             price: 39.99, category: "Accessories",   stock: 12, image: "🎒" },
+  { id:  5, name: "Sunglasses",           price: 29.99, category: "Accessories",   stock: 25, image: "🕶️" },
+  { id:  6, name: "Yoga Mat",             price: 24.99, category: "Sports",        stock: 30, image: "🧘" },
+  { id:  7, name: "Mechanical Keyboard",  price: 89.99, category: "Electronics",   stock: 10, image: "⌨️" },
+  { id:  8, name: "Desk Lamp",            price: 34.99, category: "Home",          stock: 18, image: "💡" },
+  { id:  9, name: "Water Bottle",         price: 19.99, category: "Sports",        stock: 40, image: "🧴" },
+  { id: 10, name: "Smartwatch",           price: 129.99, category: "Electronics",  stock:  6, image: "⌚" },
+  { id: 11, name: "Notebook Set",         price: 14.99, category: "Stationery",    stock: 50, image: "📓" },
+  { id: 12, name: "Pen Pack",             price:  8.99, category: "Stationery",    stock: 60, image: "🖊️" },
+  { id: 13, name: "Hoodie",               price: 44.99, category: "Clothing",      stock: 22, image: "👕" },
+  { id: 14, name: "Baseball Cap",         price: 22.99, category: "Clothing",      stock: 35, image: "🧢" },
+  { id: 15, name: "Scented Candle",       price: 17.99, category: "Home",          stock: 28, image: "🕯️" },
+  { id: 16, name: "Bluetooth Speaker",    price: 54.99, category: "Electronics",   stock: 14, image: "🔊" },
+  { id: 17, name: "Jump Rope",            price: 12.99, category: "Sports",        stock: 45, image: "🪢" },
+  { id: 18, name: "Wallet",               price: 27.99, category: "Accessories",   stock: 20, image: "👜" },
 ];
 
 let orders = [];
