@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShopEasy — E-Commerce</title>
   <link rel="stylesheet" href="style.css" />
+  <script>if(!sessionStorage.getItem("loggedIn"))location.replace("login.html");</script>
 </head>
 <body>
 
@@ -14,6 +15,7 @@
     <nav class="navbar-links">
       <a href="index.html" class="active">Home</a>
       <a href="orders.html">My Orders</a>
+      <a href="#" onclick="sessionStorage.clear();location.replace('login.html')">Logout</a>
     </nav>
     <button class="cart-btn" id="cartBtn">
       🛒 Cart <span class="cart-badge" id="cartCount">0</span>
